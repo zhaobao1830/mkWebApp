@@ -1,4 +1,19 @@
 /*基本图文组件对象*/
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    font-size: 12px;
+}
+.iphone{
+    width: 340px;
+    height: 540px;
+    background-color: #ffffff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -270px 0 0 -170px;
+}
 .h5_component{
     background-size: 100%;
     background-repeat: no-repeat;
