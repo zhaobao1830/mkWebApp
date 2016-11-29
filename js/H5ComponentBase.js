@@ -4,11 +4,12 @@
 // 基本图文组件对象
 var H5ComponentBase=function (name,cfg) {
     var cfg=cfg || {};
-    //给每个compinent定义一个ID,
+    //给每个compinent定义一个ID,把.号改为-
     var id=("h5_c_"+Math.random()).replace(".","_");
     //把当前的组件类型添加到样式中
-    var cls='h5_component_name_'+name+' h5_component_'+cfg.type;
-    var component=$("<div class='h5_component "+cls+"' id="+id+"></div>");
+    var cln='h5_component_name_'+name
+    var cls=' h5_component_'+cfg.type;
+    var component=$("<div class='h5_component "+" "+cln+""+cls+"' id="+id+"></div>");
     cfg.text && component.text(cfg.text);
     //这是在iphone5里面的，所以宽高是一半
     cfg.width && component.width(cfg.width/2);

@@ -21,8 +21,10 @@
                       text:'logo',
                       width:400,
                       height:100,
-                      css:{backgroundColor:'red',top:200},
-                      center:true
+                      css:{backgroundColor:'red',top:200,opacity:0},
+                      center:true,
+                      animateIn:{opacity:1},
+                      animateOut:{opacity:0}
                   })
                   .addComponent('slogan',{
                       text:'slogan',
@@ -36,7 +38,7 @@
                       text:'核心理念',
                       width:400,
                       height:100,
-                      css:{backgroundColor:'red',top:350},
+                      css:{backgroundColor:'green',top:350},
                       center:true
                   })
             .addPage('page-3','课程分布方向页')

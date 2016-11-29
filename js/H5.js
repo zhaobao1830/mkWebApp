@@ -50,7 +50,15 @@ var H5=function () {
 
      /**H5对象初始化呈现*/
      this.loader=function () {
-         this.el.fullpage()
+         this.el.fullpage({
+             onLeave:function (index,netIndex,direction) {
+                 $(this).find('.h5_component').trigger('onLeave')
+             },
+             afterLoad:function (anchorLink ,index) {
+                 $(this).find('.h5_component').trigger('onLoad')
+             }
+         })
+         $(".h5").find('.h5_component').trigger('onLoad')
          this.el.show()
      }
      return this;

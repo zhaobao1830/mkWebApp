@@ -37,7 +37,8 @@
             $(".page").on('onLoad',function () {
                 $(this).find('.component').trigger('onLoad')
             })
-//            使用return false,是因为component绑定的方法会向上传递
+//            使用return false,是因为page先触发onLeave事件，它下面的内容也会触发，然后component绑定的onLeave
+//            触发，component触发后，向上传播，page又触发，这就就变成了死循环
             $(".component").on('onLoad',function () {
                 $(this).fadeIn();
                 return false
